@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Typing Effect</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #ffe6e6;
+      text-align: center;
+      padding: 50px;
+    }
+    #typing {
+      font-size: 24px;
+      color: #d6336c;
+      border-right: 2px solid #d6336c;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+  <h1> yoowwww hiii </h1>
+  <div id="typing"></div>
+
+  <script>
+    const text = "Hi jo, si bern sa 12 Gas b LOL,i just wanted to confess my feelings to you, actually i just wanted to chat you on messenger but you don't accept my friend request so i made this hahaha. anyways, its pretty obvious that i like you and i know you that HAHAHAHAHAHA. halatang halata naman diba na gusto kita hahaha.its okey if you reject me,my point was just to confess.hehe anyways,ang ganda nung music mo sa fb yung be with you by ridleys and may discover pa ko dun sa banda na yun na
+music na bumagay sayo yung euphoria by ridleys HAHHAH and may kamukha kang cartoon heehehe i mean hindi totally na kamukha mo parang similar lang HAHHAHAHA yung sa
+pororo yung pink HAHAH both kayo cute. byeeeee, pwede friends tayo? eme HAHAHHAHAHAHAH";
+    let i = 0;
+
+    function typeWriter() {
+      if (i < text.length) {
+        document.getElementById("typing").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, 100); // speed of typing (100ms per letter)
+      }
+    }
+
+    typeWriter();
+  </script>
+</body>
+</html>
