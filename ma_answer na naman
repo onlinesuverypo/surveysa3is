@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Typing Effect</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #ffe6e6;
+      text-align: center;
+      padding: 50px;
+    }
+    #typing {
+      font-size: 24px;
+      color: #add8e6;
+      border-right: 2px solid #d6336c;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+  <h1> Survey lang po </h1>
+  <div id="typing"></div>
+
+  <script>
+    const text = "Hi jo, si bern sa 12 Gas b LOL,i just wanted to confess my feelings to you, actually i just wanted to chat you on messenger but you don't accept my friend request so i made this hahaha. anyways, its pretty obvious that i like you and i know you that HAHAHAHAHAHA. halatang halata naman diba na gusto kita hahaha hayss. anyways,ang ganda nung music mo sa fb yung be with you by ridleys HAhAHAHHAH XD. byeeeee, pwede friends tayo? eme HAHAHHAHAHAHAH";
+    let i = 0;
+
+<h2> pwede friends tayo?</h2>
+<buttom oneclick="alert('yeah, sure!')">yes</buttom>
+<buttom oneclick="alert('no, im sorry')">no</buttom>
+
+<h2> reject mo nako pls!</h2>
+<buttom oneclick="alert('okey sige!!')">okey</buttom>
+<buttom oneclick="alert('bakit?!')"> ayaw ko</buttom>
+    
+function typeWriter() {
+      if (i < text.length) {
+        document.getElementById("typing").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, 100); // speed of typing (100ms per letter)
+      }
+    }
+
+    typeWriter();
+  </script>
+</body>
+</html>
